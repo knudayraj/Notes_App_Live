@@ -23,7 +23,7 @@ const Account = (props) => {
     return (
     <div className='container'> 
         <div className='card' style={{width: "25rem", textAlign:"center"}}>
-            <h1 className='header'>Account Component</h1>
+            <h1 className='header'>Profile Details</h1>
             <hr />
             <h4 className='card-text'> Email - { user.email} </h4>
             <h4 className='card-body'> Username - { user.username} </h4>

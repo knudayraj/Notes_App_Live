@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from '../config/axios'
 import bootstrap from '/node_modules/bootstrap/dist/css/bootstrap.min.css'
+import Swal from 'sweetalert2'
 
 const Login = (props) => {
     const { handleAuth } = props
@@ -29,7 +30,14 @@ const Login = (props) => {
                 if(result.hasOwnProperty('errors')){
                     alert(result.errors)
                 } else {
-                    alert('Successfully logged in')
+                    // alert('Successfully logged in')
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: "Successfully logged in",
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
                     localStorage.setItem('token', result.token)
                     props.history.push('/')
                     props.handleAuth()
