@@ -1,6 +1,6 @@
 # Notes-App
 
-My Task-Box is an application which helps to keep track of pending/completed tasks.
+Notes app will help to store all personal notes for each user with login Functionality. 
 
 **🛠 Tech Stack**
 
