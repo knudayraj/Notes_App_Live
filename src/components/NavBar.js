@@ -8,6 +8,7 @@ import Account from './Account'
 import MyNotes from './MyNotes'
 import bootstrap from '/node_modules/bootstrap/dist/css/bootstrap.min.css'
 import PrivateRoute from '../helpers/PrivateRoute'
+import ContactUs from './ContactUs'
 
 
 const NavBar = (props) => {
@@ -21,6 +22,7 @@ const NavBar = (props) => {
             <div className="d-flex justify-content-end">
                 <ul>
                     <><Link to="/" >Home</Link> | </>
+                    <><Link to="/" >Contact us</Link> | </>
                     { userLoggedIn ? 
                     <React.Fragment>
                         <><Link to="/account">Account</Link> | </>
@@ -41,6 +43,7 @@ const NavBar = (props) => {
                 </ul>
             </div>
           <Route path="/" component={Home} exact />
+          <Route path="/contactus" component={ContactUs} exact />
           <Route path="/register" component={Register} />
           <Route path="/login" render={(props) => {
               return <Login 
